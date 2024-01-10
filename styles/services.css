@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+*{
+    margin: 0;padding: 0;
+}
+:root{
+    --primary: #74C69D;
+    --black: #212529;
+    --gray: #8F9193;
+}
+body{
+    font-family: 'Quicksand', sans-serif;
+    scroll-behavior: smooth;
+
+}
+header{
+    background-color: var(--primary);
+    padding: 30px 80px;
+    max-width: 100%;
+    box-sizing: border-box;
+    
+}
+.navbar{
+    display: flex;
+    align-items: center;
+}
+.navbar .logo{
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-weight: 800;
+    font-size: 1.3rem;
+    color: white;
+}
+.navbar .navbar-list{
+    display: flex;
+    list-style: none;
+    margin-left: auto;
+    gap: 4rem;
+    font-size: 1.1rem;
+    color: white;
+    font-weight: 700;
+    align-items: center;
+}
+.navbar .navbar-list a{
+    text-decoration: none;
+    color: white;
+}
+.navbar-list a {
+    position: relative;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navbar-list a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #fff;
+    transition: width 0.3s ease;
+}
+
+.navbar-list a:hover::after {
+    width: 100%;
+}
+.navbar .navbar-list svg{
+    display: none;
+}
+header .banner{
+    display: flex;
+    max-width: 100%;
+    margin-top: 4rem;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .banner .text .welcome{
+    font-size: 1.5rem;
+    color: white;
+    letter-spacing: 1.1rem;
+    font-weight: 700;
+}
+header .banner .text .title{
+    font-size: 2rem;
+    color: white;
+    margin-top: 1.4rem;
+    font-weight: 800;
+}
+header .banner .text .paragraph{
+    font-size: 1.2rem;
+    color: white;
+    margin-top: 1.4rem;
+    text-align: justify;
+    width: 70%;
+}
+
+header .banner .text .explore{
+    font-size: 1.2rem;
+    color: black;
+    background-color: white;
+    padding: 10px;
+    text-align: center;
+    display: inline-block;
+    margin-top: 1.4rem;
+    font-weight: 600;
+}
+
+main .p1{
+    padding: 30px 80px;
+    max-width: 100%;
+}
+
+main .p1 .plans,
+main .p1 .service,
+main .p1 .caption{
+    text-align: center;
+}
+main .p1 .services-list{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+}
+main .p1 .services-list .basic,
+main .p1 .services-list .plus,
+main .p1 .services-list .pro
+{
+   max-width: 300px;
+   box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.22);
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.22);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.22);
+}
+main .p1 .list{
+    display: flex;
+    align-items: center;
+    font-size: 1.1rem;
+    gap: 10px;
+}
+main .p1 .type{
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: 800;
+}
+main .p1 .price{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0 75px;
+}
+main .p1 .price .dollar{
+    font-size: 2.3rem;
+    font-weight: 900;
+}
+main .p1 .price .month{
+    font-size: 1.1rem;
+    color: var(--gray);
+}
+main .p1 .services-list .basic .caption{
+    text-align: center;
+    width: 95%;
+    margin: 0 auto;
+}
+footer{
+    padding: 30px 80px;
+    max-width: 100%;
+    background-color: var(--primary);
+    display: flex;
+}
+footer .social-media{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+footer p{
+    margin-left: auto;
+    color: white;
+    font-weight: 800;
+}
+
+@media screen and (max-width: 480px) {
+    header{
+        padding: 20px;
+        max-width: 480px;
+    }
+    .navbar .navbar-list li{
+        display: none;
+    }
+    .navbar .navbar-list svg{
+        display:inline;
+        cursor: pointer;
+    }
+    header .banner{
+        flex-direction:column-reverse;
+        max-width: 480px;
+    }
+    header .banner img{
+        width: 100%;
+        border-bottom: 5px dotted white;
+        margin-top: -1rem;
+    }
+    header .banner .text .welcome{
+        font-size: 1.4rem;
+        margin-top: 1.2rem;
+    }
+    header .banner .text .paragraph{
+        width: 100%;
+    }
+    header .banner .text .explore{
+        margin-bottom: 1.1rem;
+    }
+    main .p1{
+        padding: 20px;
+        max-width: 480px;
+        margin-top: 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    main .p1 .services-list{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 2rem;
+        flex-direction: column;
+        gap: 2rem;
+    }   
+    footer{
+        padding: 20px;
+        max-width: 480px;
+        flex-direction: column;
+    }
+    footer .social-media{
+        gap: 1.2rem;
+        margin: 0 auto;
+    }
+    footer p{
+        margin: 1.1rem auto ;
+    }
+}

@@ -1,0 +1,381 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+*{
+    margin: 0;padding: 0;
+}
+:root{
+    --primary: #74C69D;
+    --black: #212529;
+}
+body{
+    font-family: 'Quicksand', sans-serif;
+    scroll-behavior: smooth;
+}
+header{
+    background-color: var(--primary);
+    padding: 30px 80px;
+    max-width: 100%;
+    box-sizing: border-box;
+    
+}
+.navbar{
+    display: flex;
+    align-items: center;
+}
+.navbar .logo{
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-weight: 800;
+    font-size: 1.3rem;
+    color: white;
+}
+.navbar .navbar-list{
+    display: flex;
+    list-style: none;
+    margin-left: auto;
+    gap: 4rem;
+    font-size: 1.1rem;
+    color: white;
+    font-weight: 700;
+    align-items: center;
+}
+.navbar .navbar-list a{
+    text-decoration: none;
+    color: white;
+}
+.navbar-list a {
+    position: relative;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navbar-list a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #fff;
+    transition: width 0.3s ease;
+}
+
+.navbar-list a:hover::after {
+    width: 100%;
+}
+.navbar .navbar-list svg{
+    display: none;
+}
+
+  
+/* Test */
+header .banner{
+    display: flex;
+    max-width: 100%;
+    margin-top: 4rem;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .banner .text .welcome{
+    font-size: 1.5rem;
+    color: white;
+    letter-spacing: 1.1rem;
+    font-weight: 700;
+}
+header .banner .text .title{
+    font-size: 2rem;
+    color: white;
+    margin-top: 1.4rem;
+    font-weight: 800;
+}
+header .banner .text .paragraph{
+    font-size: 1.2rem;
+    color: white;
+    margin-top: 1.4rem;
+    text-align: justify;
+    width: 70%;
+}
+header .banner .text .explore{
+    font-size: 1.2rem;
+    color: black;
+    background-color: white;
+    padding: 10px 50px;
+    text-align: center;
+    display: inline-block;
+    margin-top: 1.4rem;
+    font-weight: 600;
+}
+main .p1{
+    padding: 30px 80px;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+main .p1 .partners,
+main .p1 .title,
+main .p1 .caption{
+    text-align: center;
+}
+main .p1 .partner-logo{
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+ 
+main .p1 .learn-more{
+    color: white;
+    background-color: black;
+    text-align: center;
+    padding: 10px;
+    display: inline-block;
+    margin-top: 2rem;
+}
+
+main .p2{
+    padding: 30px 80px;
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+main .p2 .text{
+    width: 60%;
+}
+
+main .p2 .text .title{
+    font-size: 1.5rem;
+    font-weight: 699;
+    margin-left: 3rem;  
+}
+main .p2 .text{
+    width: 60%;
+}
+main .p2 .text .paragraph{
+    font-size: 1.1rem;
+    margin-left: 3rem;
+    margin-top: 14px;
+    text-align: justify;
+}
+main .p2 .text .learn-more{
+    color: white;
+    background-color: black;
+    text-align: center;
+    padding: 8px 20px;
+    display: inline-block;
+    margin-left: 3rem;  
+    margin-top: 14px;
+}
+main .p3{
+    padding: 30px 80px;
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+main .p3 .text{
+    width: 60%;
+}
+main .p3 .text .title{
+    font-size: 1.5rem;
+    font-weight: 699;
+}
+main .p3 .text .paragraph{
+    font-size: 1.1rem;
+    margin-top: 14px;
+    text-align: justify;
+}
+main .p3 .text .learn-more{
+    color: white;
+    background-color: black;
+    text-align: center;
+    padding: 8px 20px;
+    display: inline-block;
+    margin-top: 14px;
+}
+main .p4{
+    padding: 30px 80px;
+    max-width: 100%;
+}
+main .p4 .team,
+main .p4 .ourTalent,
+main .p4 .caption{
+    text-align: center;
+}
+main .p4 .member{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 2rem;
+}
+main .p4 .member .ceo,
+main .p4 .member .cto,
+main .p4 .member .designer,
+main .p4 .member .developer
+{
+    padding: 30px;
+    box-shadow: 9px 6px 0px 0px rgba(0,0,0,0.25);
+    -webkit-box-shadow: 9px 6px 0px 0px rgba(0,0,0,0.25);
+    -moz-box-shadow: 9px 6px 0px 0px rgba(0,0,0,0.25);
+}
+footer{
+    padding: 30px 80px;
+    max-width: 100%;
+    background-color: var(--primary);
+    display: flex;
+}
+footer .social-media{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+footer p{
+    margin-left: auto;
+    color: white;
+    font-weight: 800;
+}
+
+/* Responsive */
+@media screen and (max-width: 480px) {
+    header{
+        padding: 20px;
+        max-width: 480px;
+    }
+    .navbar .navbar-list li{
+        display: none;
+    }
+    .navbar .navbar-list svg{
+        display:inline;
+        cursor: pointer;
+    }
+    header .banner{
+        flex-direction:column-reverse;
+        max-width: 480px;
+    }
+    header .banner img{
+        width: 100%;
+        border-bottom: 5px dotted white;
+        margin-top: -1rem;
+    }
+    header .banner .text .welcome{
+        font-size: 1.4rem;
+        margin-top: 1.2rem;
+    }
+    header .banner .text .paragraph{
+        width: 100%;
+    }
+    header .banner .text .explore{
+        margin-bottom: 1.1rem;
+    }
+    main .p1{
+        padding: 20px;
+        max-width: 480px;
+        margin-top: 2rem;
+
+    }
+    main .p1 .partner-logo{
+        flex-direction: column;
+    }
+    main .p1 .partner-logo img{
+        width: 70%;
+        margin-top: -0.5rem;
+    }
+    main .p1 .partners,
+    main .p1 .title,
+    main .p1 .caption{
+        margin-bottom: 1.1rem;
+    }
+    main .p1 .caption,
+    main .p1 .title{
+        width: 100%;
+    }
+    main .p1 .learn-more{
+        padding: 10px 50px;
+    }
+    main .p2{
+        padding: 20px;
+        max-width: 480px;
+        display: flex;
+        flex-direction: column;
+        margin-top: 2rem;
+    }
+    main .p2 img{
+        width: 100%;
+    }
+    main .p2 .text .title{
+        margin-left: 0; 
+        margin-top: 1.2rem; 
+    }
+    main .p2 .text{
+        width: 100%;
+        margin-top: 1.3rem;
+    }
+    main .p2 .text .paragraph{
+        margin-left: 0;
+    }
+    
+    main .p2 .text .learn-more{
+        margin-left: 0;  
+    }
+
+    main .p3{
+        padding: 20px;
+        max-width: 480px;
+        display: flex;
+        flex-direction: column-reverse;
+        margin-top: 2rem;
+
+    }
+    main .p3 img{
+        width: 100%;
+    }
+    main .p3 .text .title{
+        margin-left: 0; 
+        margin-top: 1.2rem; 
+    }
+    main .p3 .text{
+        width: 100%;
+        margin-top: 1.3rem;
+    }
+    main .p3 .text .paragraph{
+        margin-left: 0;
+    }
+
+    main .p3 .text .learn-more{
+        margin-left: 0;  
+    }
+    main .p4{
+        padding: 20px;
+        max-width: 480px;
+        display: flex;
+        flex-direction: column;
+        margin-top: 2rem;
+
+    }
+    main .p4 .member{
+        flex-direction: column;
+    }
+    main .p4 .member .ceo,
+    main .p4 .member .cto,
+    main .p4 .member .designer,
+    main .p4 .member .developer
+    {
+        margin-bottom: 1.4rem;
+    }
+    footer{
+        padding: 20px;
+        max-width: 480px;
+        flex-direction: column;
+    }
+    footer .social-media{
+    
+        gap: 1.2rem;
+        margin: 0 auto;
+    }
+    footer p{
+        margin: 1.1rem auto ;
+    }
+}
