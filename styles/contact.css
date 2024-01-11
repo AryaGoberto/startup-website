@@ -1,28 +1,35 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
 *{
-    margin: 0;padding: 0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 :root{
     --primary: #74C69D;
     --black: #212529;
-    --gray: #8F9193;
-}
-body{
-    font-family: 'Quicksand', sans-serif;
-    scroll-behavior: smooth;
-
 }
 header{
     background-color: var(--primary);
-    padding: 30px 80px;
     max-width: 100%;
     box-sizing: border-box;
-    
 }
 .navbar{
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    padding: 30px 80px;
+    background-color: var(--primary);
+    width: 100%;
+    box-sizing: border-box;
+    position: fixed;
+    top: 0;
 }
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
 .navbar .logo{
     display: flex;
     align-items: center;
@@ -34,12 +41,15 @@ header{
 .navbar .navbar-list{
     display: flex;
     list-style: none;
-    margin-left: auto;
     gap: 4rem;
     font-size: 1.1rem;
     color: white;
     font-weight: 700;
     align-items: center;
+    justify-content: space-between;
+}
+.nav-link{
+    transition: 0.7s ease ;
 }
 .navbar .navbar-list a{
     text-decoration: none;
@@ -65,8 +75,18 @@ header{
 .navbar-list a:hover::after {
     width: 100%;
 }
-.navbar .navbar-list svg{
+.hamburger{
     display: none;
+    cursor: pointer;
+}
+.bar{
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease ;
+    background-color: white;
 }
 
 header .banner{
@@ -170,31 +190,39 @@ footer p{
         padding: 20px;
         max-width: 480px;
     }
-    .navbar .navbar-list li{
-        display: none;
+    .hamburger{
+        display: block;
     }
-    .navbar .navbar-list svg{
-        display:inline;
-        cursor: pointer;
+    .hamburger.active .bar:nth-child(2){
+        opacity: 0;
     }
-    header .banner{
-        flex-direction:column-reverse;
-        max-width: 480px;
+    .hamburger.active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
     }
-    header .banner img{
+    .hamburger.active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    .navbar-list{
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        flex-direction: column;
+        background-color: var(--primary);
         width: 100%;
-        border-bottom: 5px dotted white;
-        margin-top: -1rem;
+        text-align: center;
+        transition: 0.3s;
     }
-    header .banner .text .welcome{
-        font-size: 1.4rem;
-        margin-top: 1.2rem;
+    .navbar-list.active{
+        left: 0;
+        position: absolute;
+        gap: 2rem;
+        padding: 10px;
     }
-    header .banner .text .paragraph{
+    .navbar{
         width: 100%;
-    }
-    header .banner .text .explore{
-        margin-bottom: 1.1rem;
+        padding: 20px;        
+        top: 0;
+        left: 0;
     }
     main .p1{
         padding: 20px;
